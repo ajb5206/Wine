@@ -1,2 +1,4 @@
 .vscode
 */appsettings.json
+*/obj/
+*/bin/
