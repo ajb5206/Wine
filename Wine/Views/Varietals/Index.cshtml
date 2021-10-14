@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Wine.Models;
+
+<h1>Varietals</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No varietals have been added yet!</h3>
+} 
+
+@foreach (Varietal varietal in Model)
+{
+  <li>@varietal.VarietalName</li>
+}
