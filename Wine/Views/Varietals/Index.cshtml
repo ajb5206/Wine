@@ -3,6 +3,7 @@
 }
 
 @using Wine.Models;
+@model List<Wine.Models.Varietal>;
 
 <h1>Varietals</h1>
 
@@ -13,7 +14,7 @@
 
 @foreach (Varietal varietal in Model)
 {
-  <li>@varietal.VarietalName</li>
+  <li>@Html.ActionLink($"{varietal.VarietalName}", "Details", new { id = varietal.VarietalId })</li>
 }
 
 <p>@Html.ActionLink("Add new varietal", "Create")</p>
