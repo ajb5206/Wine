@@ -1,0 +1,17 @@
+@{
+	Layout = "_Layout";
+}
+
+@model Wine.Models.Varietal
+
+<h4>Add a new Varietal</h4>
+@using (Html.BeginForm())
+{
+	@Html.LabelFor(model => model.VarietalName)
+	@Html.TextBoxFor(model => model.VarietalName)
+	@Html.LabelFor(m => m.VarietalCharacteristics)
+	@Html.TextBoxFor(m => m.VarietalCharacteristics)
+	<input type="submit" value="Add new Varietal" />
+}
+
+<p>@Html.ActionLink("Show all varietals", "Index")</p>
